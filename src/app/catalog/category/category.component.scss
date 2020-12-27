@@ -1,11 +1,8 @@
 .container-fluid {
-
-    .category-container {
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        padding: 1%;
-        column-gap: 2%;
-        width: 100%;
-    }
+  .category-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+  }
 }
