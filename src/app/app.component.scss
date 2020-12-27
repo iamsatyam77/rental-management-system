@@ -1,0 +1,84 @@
+.container-fluid {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+
+  .header {
+    display: flex;
+    height: 3rem;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    #nav {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      float: left;
+      text-align: center;
+    }
+
+    #nav li {
+      display: inline-block;
+      position: relative;
+      float: left;
+      background: #212529;
+      z-index: 9999;
+    }
+
+    #nav li a {
+      display: inline-block;
+      width: 200px;
+      line-height: 35px;
+      padding: 0;
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    #nav li li {
+      float: left;
+      color: #212529;
+    }
+
+    #nav li li a {
+      display: block;
+      font-size: 12px;
+    }
+
+    #nav li:hover {
+      background: #212529;
+    }
+
+    /*--- Sublist Styles ---*/
+    #nav ul {
+      position: absolute;
+      padding: 0px;
+      left: 0;
+      display: none;
+    }
+
+    /*--- Hide Sub Sublists ---*/
+    #nav li:hover ul ul {
+      display: none;
+    }
+
+    /*--- Sublevel UL's display and position on hover ---*/
+    #nav li:hover ul {
+      display: block;
+    }
+    #nav li li:hover ul {
+      margin-left: 200px;
+      margin-top: -35px;
+      display: block;
+    }
+  }
+
+  .section {
+    height: calc(100vh - 6rem);
+    overflow-x: auto;
+  }
+
+  .footer {
+    height: 3rem;
+  }
+}

@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="header text-light bg-dark">
+    <div>{{title}}</div>
+    <div id="menu">
+      <ul id="nav">
+        <li><a href="javascript:void(0)">Select Location</a>
+          <ul *ngIf="(locations$ | async)">
+            <ng-container *ngFor="let location of (locations$ | async);">
+              <ng-container *ngIf="location?.branches?.length > 0; elseBlock">
+                <li><a href="javascript:void(0)">{{location?.name}}</a>
+                  <ul>
+                    <li><a href="javascript:void(0)" *ngFor="let branch of location.branches;"
+                        routerLink="/category/{{location.dealers_id}}/{{branch.branch_id}}">{{branch.name}}</a>
+                  </ul>
+                </li>
+              </ng-container>
+              <ng-template>
+                <li><a href="javascript:void(0)">{{location.name}}</a></li>
+              </ng-template>
+            </ng-container>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="section">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="footer bg-dark"></div>
+</div>
