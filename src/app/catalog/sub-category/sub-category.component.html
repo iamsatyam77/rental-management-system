@@ -9,7 +9,7 @@
   <div *ngIf="category" class="category-container">
     <ng-container *ngFor="let subCategory of category.subcategories">
       <div class="card m-3">
-        <img src="/assets/category/subcategory/{{ subCategory.image }}" alt="" />
+        <img src="/assets/images/{{ subCategory.image }}" alt="" />
         <button class="btn btn-lg btn-primary">{{ subCategory.name }}
           <span class="text-white float-end">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
